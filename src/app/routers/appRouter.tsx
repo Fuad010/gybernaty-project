@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
             {
                 path: '/projects',
                 element: <></>
+            },
+            {
+                path: '/invites',
+                element: <></>
             }
         ]
     }

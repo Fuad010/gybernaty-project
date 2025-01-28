@@ -27,7 +27,7 @@ const HeaderWrapper = styled.header`
 
 const NavLeft = styled.div`
     display: flex;
-    width: 337px;
+    width: 390px;
     justify-content: space-between;
     align-items: center;
 `
