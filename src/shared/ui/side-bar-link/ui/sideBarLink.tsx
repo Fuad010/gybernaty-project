@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 interface SideBarLinkProps {
   link: string;
+  disabled?: boolean
   children: string;
 }
 
@@ -49,12 +50,23 @@ const StyledLink = styled.div<{ isActive: boolean }>`
   `}
 `;
 
-export const SideBarLink: FC<SideBarLinkProps> = ({ link, children }) => {
+export const SideBarLink: FC<SideBarLinkProps> = ({ link, children, disabled }) => {
+  const location = useLocation();
+  const isPartiallyActive = location.pathname.includes(link);
+  
   return (
-    <NavLink to={link} end>
-      {({ isActive }) => (
-        <StyledLink isActive={isActive}>{children}</StyledLink>
-      )}
-    </NavLink>
+    !disabled ? (
+      <NavLink to={link} end>
+        {({ isActive }) => (
+          <StyledLink isActive={isActive || isPartiallyActive}>
+            {children}
+          </StyledLink>
+        )}
+      </NavLink>
+    ) : (
+        <StyledLink isActive={false} >
+          {children}
+        </StyledLink>
+    )
   );
 };

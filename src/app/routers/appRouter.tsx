@@ -8,7 +8,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to="/projects" replace />
+                element: <Navigate to="/" replace />
             },
             {
                 path: '/projects',
@@ -16,6 +16,10 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/invites',
+                element: <></>
+            },
+            {
+                path: '/projects/createproject',
                 element: <></>
             }
         ]

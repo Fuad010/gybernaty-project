@@ -1,0 +1,1 @@
+export { LayoutPathName } from './ui/layoutPathName'

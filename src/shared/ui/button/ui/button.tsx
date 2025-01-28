@@ -17,8 +17,7 @@ const StyledButton = styled.button<ButtonProps>`
     background: #E5E6EE;
     color: #434555;
     font-size: ${({fontSize}) => fontSize || 'auto'};
-    width: ${({width}) => width ? "100%" : "auto"};
-    max-width: ${({width}) => width || '100%'};
+    width: ${({width}) => width || '100%'};
     height: ${({height}) => height ? "100%" : "auto"};
     max-height: ${({height}) => height || '100%'};
     font-weight: ${({isBold}) => isBold ? "700" : "400"};
