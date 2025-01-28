@@ -8,7 +8,7 @@ export const Sidebar = () => {
   return (
     <Flex direction="column" padding="49px" gap="49px" backGroundColor="#30333F" height="100%" width="440px">
           <Link to="/projects/createproject">
-            <Button isBold={true} fontSize={"24px"} width={"241px"} >
+            <Button isBold={true} fontSize={"24px"} width={"241px"} borderHave={false} hoverDisable={false} >
               CREATE
             </Button>
           </Link>

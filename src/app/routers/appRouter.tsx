@@ -1,5 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Layout } from "../layout";
+import { Projects } from "pages/projects";
+import { Invites } from "pages/invites";
 
 export const router = createBrowserRouter([
     {
@@ -12,11 +14,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/projects',
-                element: <></>
+                element: <Projects />
             },
             {
                 path: '/invites',
-                element: <></>
+                element: <Invites />
             },
             {
                 path: '/projects/createproject',

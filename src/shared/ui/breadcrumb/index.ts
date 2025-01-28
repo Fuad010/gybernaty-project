@@ -1,1 +1,1 @@
-import { Breadcrumb } from './ui/breadcrumb'
+export { Breadcrumb } from './ui/breadcrumb'

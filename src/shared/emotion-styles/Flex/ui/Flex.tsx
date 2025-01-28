@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { FC } from "react"
 
-interface FlexProps extends React.HTMLAttributes<HTMLDivElement>{
+interface IFlexProps extends React.HTMLAttributes<HTMLDivElement>{
     direction?: string;
     justify?: string
     align?: string
@@ -10,9 +10,12 @@ interface FlexProps extends React.HTMLAttributes<HTMLDivElement>{
     width?: string;
     height?: string;
     backGroundColor?: string;
+    margin?: string;
+    border?: string;
+    borderRadius?: string;
 }
 
-const StyledFlex = styled.div<FlexProps>`
+const StyledFlex = styled.div<IFlexProps>`
     display: flex;
     justify-content: ${({justify}) => justify || 'flex-start'};
     align-items: ${({align}) => align || 'stretch'};
@@ -22,8 +25,11 @@ const StyledFlex = styled.div<FlexProps>`
     width: ${({width}) => width || 'auto'};
     height: ${({height}) => height || 'auto'};
     background-color: ${({backGroundColor}) => backGroundColor || 'transparent'};
+    margin: ${({margin}) => margin || '0'};
+    border: ${({border}) => border || 'none'};
+    border-radius: ${({borderRadius}) => borderRadius || '0'};
 `
 
-export const Flex: FC<FlexProps> = (props) =>{
+export const Flex: FC<IFlexProps> = (props) =>{
     return <StyledFlex {...props}/>
 }
