@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Flex } from 'shared/emotion-styles/Flex/ui/Flex'
 import { Breadcrumb } from 'shared/ui/breadcrumb'
 import { LayoutPathName } from 'shared/ui/layout-path-name'
@@ -7,6 +7,9 @@ import { Header } from 'widgets/header'
 import { Sidebar } from 'widgets/sidebar/ui/sidebar'
 
 export const Layout = () =>{
+    const { pathname } = useLocation();
+    const showFilter = ['/projects', '/invites'].includes(pathname);
+
     return(
         <div style={{height:"100vh"}}>
             <Header />
@@ -15,7 +18,7 @@ export const Layout = () =>{
                 <main style={{padding:"25px 40px 67px 40px", width:"100%"}}>
                     <Breadcrumb />
                     <LayoutPathName />
-                    <Filter />
+                    {showFilter && <Filter />}
                     <Outlet/>
                 </main>
             </Flex>

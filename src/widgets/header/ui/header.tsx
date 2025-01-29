@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { SearchInput } from "shared/search-input"
+import { SearchInput } from "shared/ui/search-input"
 import defaultAvatar from 'shared/assets/icons/defaultAvatar.svg'
 import setting from 'shared/assets/icons/Setting.svg'
 import notification from 'shared/assets/icons/notification.svg'

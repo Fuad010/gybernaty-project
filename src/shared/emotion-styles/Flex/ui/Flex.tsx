@@ -13,6 +13,8 @@ interface IFlexProps extends React.HTMLAttributes<HTMLDivElement>{
     margin?: string;
     border?: string;
     borderRadius?: string;
+    borderBottom?: string;
+    overflow?: string;
 }
 
 const StyledFlex = styled.div<IFlexProps>`
@@ -28,6 +30,8 @@ const StyledFlex = styled.div<IFlexProps>`
     margin: ${({margin}) => margin || '0'};
     border: ${({border}) => border || 'none'};
     border-radius: ${({borderRadius}) => borderRadius || '0'};
+    border-bottom: ${({borderBottom}) => borderBottom || 'none'};
+    overflow: ${({overflow}) => overflow || 'visible'};
 `
 
 export const Flex: FC<IFlexProps> = (props) =>{

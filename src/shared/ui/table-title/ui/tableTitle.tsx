@@ -1,6 +1,5 @@
 import styled from "@emotion/styled"
 import { FC } from "react"
-import { Flex } from "shared/emotion-styles/Flex/ui/Flex"
 
 interface ITableProps {
     gridColumnsCss: string;
@@ -22,25 +21,18 @@ const StyledTable = styled.div<ITableProps>`
         color: #E5E6EE;
         font-size: 15px;
         font-weight: 600;
-    }
-`
+    }`
 
-export const Table: FC<ITableProps> = ({ gridColumnsCss, columns }) => {
+export const TableTitle: FC<ITableProps> = ({gridColumnsCss, columns}) => {
     return (
-      <Flex
-        borderRadius="15px"
-        border="2.5px solid #30333F"
-        margin="20px 0 0 0"
-        height="calc(100% - 170px)"
-        width="100%"
-      >
         <StyledTable gridColumnsCss={gridColumnsCss} columns={[]}>
+          <p style={{textAlign:"start"}}>Title</p>
           {columns.map((col, index) => (
-            <p key={index} style={{ textAlign: index === 0 ? "start" : "center" }}>
+            <p key={index}>
               {col}
             </p>
           ))}
+          <p>Actions</p>
         </StyledTable>
-      </Flex>
-    );
-  };
+    )
+}
