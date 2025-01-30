@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Layout } from "../layout";
 import { Projects } from "pages/projects";
 import { Invites } from "pages/invites";
+import { CreateProject } from "pages/create-project";
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/projects/createproject',
-                element: <></>
+                element: <CreateProject/>
             }
         ]
     }

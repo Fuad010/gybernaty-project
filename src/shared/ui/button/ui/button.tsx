@@ -15,10 +15,12 @@ const StyledButton = styled.button<IButtonProps>`
     transition: 0.1s;
     transition-timing-function: linear;
     padding: 10px 14px;
+    padding-left: ${({sidePadding}) => sidePadding || '14px'};
+    padding-right: ${({sidePadding}) => sidePadding || '14px'};
     border-radius: 10px;
     background: ${({borderHave}) => borderHave ? "none" : "#E5E6EE"};
     font-size: ${({fontSize}) => fontSize || 'auto'};
-    width: ${({width}) => width || 'auto'};
+    min-width: ${({width}) => width || 'auto'};
     height: ${({height}) => height ? "100%" : "auto"};
     max-height: ${({height}) => height || '100%'};
     font-weight: ${({isBold}) => isBold ? "700" : "400"};

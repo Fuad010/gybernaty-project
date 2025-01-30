@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom'
-import { Flex } from 'shared/emotion-styles/Flex/ui/Flex'
+import { Flex } from 'shared/emotion-styles/Flex'
 import { Breadcrumb } from 'shared/ui/breadcrumb'
 import { LayoutPathName } from 'shared/ui/layout-path-name'
 import { Filter } from 'widgets/filter'
@@ -15,7 +15,7 @@ export const Layout = () =>{
             <Header />
             <Flex height="calc(100% - 80px)">
                 <Sidebar />
-                <main style={{padding:"25px 40px 67px 40px", width:"100%"}}>
+                <main style={{padding:"25px 40px 67px 40px", width:"100%", overflow:"auto"}}>
                     <Breadcrumb />
                     <LayoutPathName />
                     {showFilter && <Filter />}

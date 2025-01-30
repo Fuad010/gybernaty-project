@@ -9,7 +9,7 @@ export const $projects = createStore<IProject[]>([
     {
         id:"1",
         title:"Gyber Plan",
-        status:1,
+        status: 'TO DO',
         priority:2,
         lead:"Maksim Kasparov",
         targetDate: new Date("2024-01-28"),

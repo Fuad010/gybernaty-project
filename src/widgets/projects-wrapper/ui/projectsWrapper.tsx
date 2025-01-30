@@ -1,19 +1,23 @@
+import { useUnit } from "effector-react";
+import { $projects } from "entities/project/model/storage";
 import styled from "@emotion/styled";
 import { TableRowProject } from "entities/project/table-row-project";
 import { TableRow } from "shared/ui/table-row";
 import { TableTitle } from "shared/ui/table-title";
-
 const StyledTableWrapper = styled.div`
   border-radius:15px;
   border:2.5px solid #30333F;
   margin:20px 0 0 0;
-  height:calc(100% - 170px);
+  height:calc(100% - 220px);
   width:100%;
   overflow:hidden;
 `
 
-export const TableWrapper = () => {
-    return (
+export const ProjectsWrapper = () => {
+  const projects = useUnit($projects)
+    console.log(projects);
+      
+  return (
         <StyledTableWrapper
         >
           <TableTitle 
@@ -26,7 +30,10 @@ export const TableWrapper = () => {
                 'Target date', 
             ]}/>
           <div style={{overflow:"auto", paddingBottom:"30px", height:"100%"}}>
-            <TableRowProject project={undefined} />
+
+             {projects.map((project) => (
+              <TableRowProject key={project.id} project={project} />
+            ))}
           </div>
         </StyledTableWrapper>
     );

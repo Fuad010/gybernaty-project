@@ -1,4 +1,4 @@
-import { Flex } from "shared/emotion-styles/Flex/ui/Flex"
+import { Flex } from "shared/emotion-styles/Flex"
 import { SearchInput } from "shared/ui/search-input"
 import { Button } from "shared/ui/button/ui/button"
 import { FilterButton } from "shared/ui/filter-button"

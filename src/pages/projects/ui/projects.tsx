@@ -1,10 +1,10 @@
-import { TableWrapper } from "widgets/table-wrapper"
+import { ProjectsWrapper } from "widgets/projects-wrapper"
 
 export const Projects = () => {
 
     return(
         <>
-            <TableWrapper/>
+            <ProjectsWrapper/>
         </>
     )
 }

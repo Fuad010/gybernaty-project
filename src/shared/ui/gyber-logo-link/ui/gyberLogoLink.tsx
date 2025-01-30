@@ -14,7 +14,7 @@ const StyledNavLink = styled(RouterNavLink)`
 
 export const GyberLogoLink = () => {
     return (
-        <StyledNavLink to='#'>
+        <StyledNavLink to='/projects'>
             <img src={gyberLogo} alt='logo' />
             <h1>Gyber Projects</h1>
         </StyledNavLink>

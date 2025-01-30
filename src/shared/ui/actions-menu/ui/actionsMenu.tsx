@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { FC } from "react";
 import invite from "shared/assets/icons/invite.svg";
 import trash from "shared/assets/icons/trash.svg";
-import { Flex } from "shared/emotion-styles/Flex/ui/Flex";
+import { Flex } from "shared/emotion-styles/Flex";
 
 const StyledAction = styled.button`
   width: 30px;
