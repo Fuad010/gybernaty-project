@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
+import { InviteActions } from "features/invite-actions";
 import { FC, ReactNode } from "react";
 
 interface ITableRowProps {
   gridColumnsCss: string;
   columns: (string | ReactNode)[];
   actions?: ReactNode;
+  id?: string;
 }
 
 const StyledTableRow = styled.div<{ gridColumnsCss: string }>`
@@ -24,7 +26,7 @@ const StyledTableRow = styled.div<{ gridColumnsCss: string }>`
   }
 `;
 
-export const TableRow: FC<ITableRowProps> = ({ gridColumnsCss, columns, actions }) => {
+export const TableRow: FC<ITableRowProps> = ({ gridColumnsCss, columns, actions, id }) => {
   return (
     <StyledTableRow gridColumnsCss={gridColumnsCss}>
       {columns.map((col, index) => (
@@ -42,7 +44,11 @@ export const TableRow: FC<ITableRowProps> = ({ gridColumnsCss, columns, actions 
             }}>{col}</p> : <p>{col}</p>}
         </div>
       ))}
-      {actions && <div>{actions}</div>}
+      {!id ? (
+        <div>{actions}</div>
+      ) : (
+        <InviteActions projectId={id}  />
+      )}
     </StyledTableRow>
   );
 };

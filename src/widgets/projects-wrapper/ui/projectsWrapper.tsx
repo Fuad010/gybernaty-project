@@ -2,7 +2,6 @@ import { useUnit } from "effector-react";
 import { $projects } from "entities/project/model/storage";
 import styled from "@emotion/styled";
 import { TableRowProject } from "entities/project/table-row-project";
-import { TableRow } from "shared/ui/table-row";
 import { TableTitle } from "shared/ui/table-title";
 const StyledTableWrapper = styled.div`
   border-radius:15px;
@@ -15,7 +14,6 @@ const StyledTableWrapper = styled.div`
 
 export const ProjectsWrapper = () => {
   const projects = useUnit($projects)
-    console.log(projects);
       
   return (
         <StyledTableWrapper

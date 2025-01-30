@@ -4,7 +4,7 @@ import { Button } from "shared/ui/button/ui/button";
 import { Input } from "shared/ui/input";
 import { SelectOption } from "shared/ui/select-option";
 import { useUnit } from "effector-react";
-import { $createProjectForm, setFormData, resetForm } from "../model/store";
+import { $createProjectForm, setFormData, resetForm } from "entities/project/model/storage";
 import { addProject } from "entities/project/model/storage";
 import { v4 as uuidv4 } from "uuid";
 import { IProject } from "entities/project/model/types";
@@ -69,7 +69,7 @@ export const CreateProjectForm = () => {
     }
 
     if (!formData.title) {
-      newErrors.push("Target Date is required.");
+      newErrors.push("Title is required.");
     }
 
     return newErrors;
